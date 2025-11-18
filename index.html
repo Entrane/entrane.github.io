@@ -279,14 +279,15 @@
         position: relative;
     }
 
+    /* === CARTE HERO + BADGE VERT CORRIGÉ === */
+
     .hero-card {
         background: var(--bg-soft);
         border-radius: 26px;
-        padding: 20px 20px 46px;
+        padding: 20px 20px 24px;       /* moins de padding bas */
         box-shadow: var(--shadow-soft);
         border: 1px solid rgba(229, 231, 235, 0.8);
-        position: relative;
-        overflow: hidden;
+        overflow: hidden;              /* plus de position: relative */
     }
 
     .hero-image-wrapper {
@@ -335,13 +336,15 @@
     }
 
     .hero-badge {
-        position: absolute;
-        right: 20px;
-        bottom: 16px;
+        position: static;              /* reste dans le flux */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 14px;
         background: linear-gradient(135deg, #22c55e, #4ade80);
         border-radius: 999px;
-        padding: 6px 12px;
-        font-size: 11px;
+        padding: 8px 18px;
+        font-size: 12px;
         color: #022c22;
         font-weight: 600;
     }
@@ -505,13 +508,13 @@
     <section class="hero">
         <div>
             <h1 class="hero-title">
-    Un site pro qui donne envie<br> à tes visiteurs de te contacter.
-</h1>
-
-<div class="hero-kicker">
-    <span></span> Sites vitrines & pages de vente
-</div>
+                Un site pro qui donne envie<br> à tes visiteurs de te contacter.
             </h1>
+
+            <div class="hero-kicker">
+                <span></span> Sites vitrines & pages de vente
+            </div>
+
             <p class="hero-subtitle">
                 Je conçois pour toi un site clair, rapide et crédible : design soigné, version mobile nickel
                 et boutons bien placés pour transformer les visites en prises de contact.
@@ -655,6 +658,3 @@ function openFullscreen(img) {
 </script>
 </body>
 </html>
-
-
-
