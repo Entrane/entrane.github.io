@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1L766D7F3D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1L766D7F3D');
+</script>
+    <meta charset="UTF-8">
+    <title>Portfolio – Exemples de sites modernes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --bg-soft: #ffffff;
+            --text: #111827;
+            --muted: #6b7280;
+            --primary: #6366f1;
+            --border: #e5e7eb;
+            --radius-xl: 18px;
+            --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #e0e7ff 0, #f9fafb 45%, #f5f5f7 100%);
+            color: var(--text);
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        header {
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(229,231,235,0.8);
+            backdrop-filter: blur(14px);
+            position: sticky;
+            top: 0;
+            background: rgba(249,250,251,0.9);
+            z-index: 10;
+        }
+
+        .nav {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px; /* arrondis légers, comme ton logo */
+    background: url("images/favicon.png") center/cover no-repeat;
+}
+        .nav-title {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav a {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 32px 20px 56px;
+        }
+
+        .intro h1 {
+            font-size: 28px;
+            margin: 0 0 8px;
+            letter-spacing: -0.03em;
+        }
+
+        .intro p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+            max-width: 640px;
+        }
+
+        .grid {
+            margin-top: 26px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .project {
+            position: relative;
+            background: var(--bg-soft);
+            border-radius: 22px;
+            padding: 16px 16px 18px;
+            border: 1px solid rgba(229,231,235,0.9);
+            box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project::before {
+            content: "";
+            position: absolute;
+            inset: -40%;
+            background: conic-gradient(from 180deg at 50% 50%, #818cf833, transparent, #a855f733, transparent);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .project-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 50px rgba(15,23,42,0.18);
+            border-color: #c7d2fe;
+        }
+
+        .project:hover::before {
+            opacity: 1;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #4f46e5;
+            margin-bottom: 8px;
+        }
+
+    .project h2 {
+        font-size: 16px;
+      margin: 0 0 8px;
+        color: #000000; /* titre bien noir */
+}
+
+/* image dans chaque carte */
+.project-image {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    margin: 6px 0 12px;   /* espace au-dessus et en dessous */
+    object-fit: cover;    /* coupe proprement si l’image est plus grande */
+}
+
+.project p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        .chip {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+            color: #6b7280;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--primary);
+        }
+
+        .note {
+            margin-top: 24px;
+            font-size: 12px;
+            color: var(--muted);
+            max-width: 720px;
+        }
+
+        @media (max-width: 600px) {
+            .intro h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <div class="nav-left">
+            <div class="logo-circle"></div>
+            <span class="nav-title">Portfolio – Tes futurs sites</span>
+        </div>
+        <a href="index.html">Retour à l’accueil</a>
+    </div>
+</header>
+
+<main class="container">
+    <section class="intro">
+        <h1>Exemples de sites modernes & épurés</h1>
+        
+    </section>
+
+    <section class="grid">
+        <article class="project">
+            <div class="project-inner">
+                <div class="tag">Agence / Freelance</div>
+                <h2>Site “one-page” avec sections fluides</h2>
+                <img src="images/one page.jpg" alt="Exemple de site one-page" class="project-image">
+                <p>Page unique avec menu fixe qui défile vers les sections : services, preuves, tarifs, contact.</p>
+                <div class="chips">
+                    <span class="chip">Scroll doux</span>
+                    <span class="chip">Sections ancrées</span>
+                    <span class="chip">CTA toujours visible</span>
+                </div>
+                <a href="#">Démo sur demande</a>
+            </div>
+        </article>
+
+        <article class="project">
+            <div class="project-inner">
+                <div class="tag">Coach / Consultant</div>
+                <h2>Page personnelle avec prise de rendez-vous</h2>
+                <img src="images/coiffeur.jpg" alt="Exemple de site one-page" class="project-image">
+                <p>Présentation claire, bloc “Ce que je t’apporte”, témoignages, questions fréquentes, bouton “Réserver un appel”.</p>
+                <div class="chips">
+                    <span class="chip">Personal branding</span>
+                    <span class="chip">FAQ interactive</span>
+                    <span class="chip">Bouton Calendly ou formulaire</span>
+                </div>
+                <a href="#">Démo sur demande</a>
+            </div>
+        </article>
+
+        <article class="project">
+            <div class="project-inner">
+                <div class="tag">Commerce local</div>
+                <h2>Site pour restaurant / café</h2>
+                <img src="images/restaurant.jpg" alt="Exemple de site one-page" class="project-image">
+                <p>Menu lisible, horaires, carte, photos, lien vers Google Maps et bouton “Appeler / Réserver”.</p>
+                <div class="chips">
+                    <span class="chip">Mise en avant du lieu</span>
+                    <span class="chip">Menu simple</span>
+                    <span class="chip">Intégration Google Maps</span>
+                </div>
+                <a href="#">Démo sur demande</a>
+            </div>
+        </article>
+
+        <article class="project">
+            <div class="project-inner">
+                <div class="tag">Produit numérique</div>
+                <h2>Landing page pour application ou formation</h2>
+                <img src="images/landing page.jpg" alt="Exemple de site one-page" class="project-image">
+                <p>Hero très clair, sections bénéfices, captures d’écran / maquettes, plans tarifaires, FAQ et CTA fort.</p>
+                <div class="chips">
+                    <span class="chip">Look startup</span>
+                    <span class="chip">Section tarifs</span>
+                    <span class="chip">Optimisé conversion</span>
+                </div>
+                <a href="#">Démo sur demande</a>
+            </div>
+        </article>
+    </section>
+
+    
+</main>
+
+</body>
+</html>
+
+
+
+
+
