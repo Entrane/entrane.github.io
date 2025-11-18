@@ -170,12 +170,23 @@
             margin-bottom: 16px;
         }
 
-        .back-link {
+        /* Nouveau bouton retour */
+        .back-btn {
             display: inline-block;
             margin-top: 40px;
-            color: #6366f1;
-            text-decoration: underline;
-            font-size: 17px;
+            padding: 10px 18px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #4f46e5;
+            background: #eef2ff;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .back-btn:hover {
+            background: #e0e7ff;
+            transform: translateY(-1px);
         }
 
         footer {
@@ -296,7 +307,8 @@
     <h2>Conclusion</h2>
     <p>Un site performant repose sur une combinaison équilibrée : clarté, navigation intuitive, CTA efficaces, contenu structuré, optimisation SEO, performance technique, design moderne et réassurance.</p>
 
-    <a class="back-link" href="index.html">← Revenir à la page d’accueil</a>
+    <!-- Nouveau bouton retour -->
+    <a href="index.html" class="back-btn">← Retour à l’accueil</a>
 </main>
 
 <footer>
