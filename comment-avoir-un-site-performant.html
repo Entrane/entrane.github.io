@@ -4,13 +4,250 @@
     <meta charset="UTF-8">
     <title>Comment avoir un site performant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- POLICES -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(circle at top left,  #e0f2fe 0, transparent 55%),
+                radial-gradient(circle at top right, #ede9fe 0, transparent 60%),
+                radial-gradient(circle at bottom,    #fef9c3 0, transparent 60%),
+            #f5f5f7;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #1e293b;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(14px);
+            background: rgba(249, 250, 251, 0.8);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        .nav {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: url("images/favicon.png") center/cover no-repeat;
+        }
+
+        .brand {
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #6366f1;
+            transition: width .2s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Manrope';
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Manrope';
+            font-size: 26px;
+            margin-top: 40px;
+            color: #4f46e5;
+        }
+
+        h3 {
+            font-family: 'Manrope';
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #6366f1;
+            text-decoration: underline;
+            font-size: 17px;
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            padding: 20px;
+            background: #f9fafb;
+            font-size: 14px;
+            color: #6b7280;
+        }
+    </style>
 </head>
 <body>
-    <h1>Comment avoir un site performant</h1>
-    <p>Ici tu pourras expliquer comment rendre un site plus rapide, clair et efficace.</p>
 
-    <p>
-        <a href="index.html">⬅ Revenir à la page d'accueil</a>
-    </p>
+<header>
+    <div class="nav">
+        <div style="display:flex; align-items:center;">
+            <div class="logo-circle"></div>
+            <span class="brand"> • Création de sites web</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="apropos.html">À propos</a>
+            <a href="comment-avoir-un-site-performant.html">Optimiser son site</a>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ARTICLE -->
+<div class="container">
+    <h1>Les Bonnes Pratiques Essentielles pour un Site Internet Performant</h1>
+
+    <p>Créer un site internet ne consiste pas seulement à mettre en ligne quelques pages : c’est construire un véritable outil de communication qui doit être clair, efficace et visible. Cet article présente les bonnes pratiques indispensables pour garantir un site performant : message clair, SEO, structure, contenu et conversions.</p>
+
+    <h2>⭐ 1. Avoir un message clair</h2>
+
+    <p>Lorsqu’un internaute arrive sur votre site, vous disposez de 3 à 5 secondes pour lui montrer :</p>
+
+    <ul>
+        <li>Qui vous êtes</li>
+        <li>Ce que vous proposez</li>
+        <li>En quoi cela l’intéresse</li>
+        <li>Ce qu’il doit faire ensuite</li>
+    </ul>
+
+    <h3>✔ Un titre simple et explicite</h3>
+    <p>Exemple : “Agence web spécialisée en création de sites performants”.</p>
+
+    <h3>✔ Un sous-titre efficace</h3>
+    <p>“Nous accompagnons entrepreneurs et PME dans la conception de sites modernes, rapides et orientés conversions.”</p>
+
+    <h3>✔ Un visuel professionnel</h3>
+
+    <h3>✔ Un call-to-action clair</h3>
+    <p>Exemple : “Demander un devis”, “Nous contacter”.</p>
+
+
+    <h2>⭐ 2. Les Call-To-Action (CTA)</h2>
+    <p>Un bon CTA est visible, actionnable, stratégique et cohérent.</p>
+
+    <h3>✔ Formulations efficaces</h3>
+    <ul>
+        <li>✔ “Obtenir un devis gratuit”</li>
+        <li>✔ “Découvrir nos offres”</li>
+        <li>❌ “En savoir plus”</li>
+    </ul>
+
+
+    <h2>⭐ 3. Le SEO : indispensable pour être visible</h2>
+
+    <h3>Les piliers du SEO</h3>
+    <ul>
+        <li><strong>Contenu :</strong> titres structurés, paragraphes courts, mots-clés adaptés.</li>
+        <li><strong>Technique :</strong> rapidité, mobile-friendly, sitemap, balises meta.</li>
+        <li><strong>Popularité :</strong> liens entrants, mentions, réseaux sociaux.</li>
+    </ul>
+
+    <p>Un site bien optimisé peut augmenter son trafic de +40 % à +150 % en quelques mois.</p>
+
+
+    <h2>⭐ 4. Un contenu de qualité</h2>
+    <p>Il informe, rassure, convainc et améliore votre SEO.</p>
+
+    <h3>Structure idéale</h3>
+    <ul>
+        <li>Titre clair</li>
+        <li>Introduction</li>
+        <li>Problème</li>
+        <li>Solutions</li>
+        <li>Témoignages</li>
+        <li>CTA final</li>
+    </ul>
+
+
+    <h2>⭐ 5. Navigation et structure</h2>
+    <p>Menu simple, architecture logique et liens internes.</p>
+
+
+    <h2>⭐ 6. Performances</h2>
+    <p>La rapidité influence le SEO, la conversion et la crédibilité.</p>
+
+
+    <h2>⭐ 7. Éléments de réassurance</h2>
+    <ul>
+        <li>Avis clients</li>
+        <li>Certifications</li>
+        <li>Mentions légales</li>
+    </ul>
+
+
+    <h2>⭐ 8. Impact global d’une optimisation</h2>
+    <p>Un site optimisé peut augmenter son trafic, améliorer son score SEO et multiplier ses conversions.</p>
+
+
+    <h2>Conclusion</h2>
+    <p>Un site performant repose sur une combinaison équilibrée : clarté, navigation intuitive, CTA efficaces, contenu structuré, optimisation SEO, performance technique, design moderne et réassurance.</p>
+
+    <a class="back-link" href="index.html">← Revenir à la page d’accueil</a>
+</div>
+
+
+<footer>
+    © <span id="year"></span> – Création de sites internet modernes
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
